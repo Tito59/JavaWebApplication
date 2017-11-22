@@ -13,7 +13,7 @@
     </head>
     <body>
         <ul>
-            <li><a href="liste_films.jsp">Liste des séries</a></li>
+            <li><a href="/AtelierJavaWeb/lister_films">Liste des séries</a></li>
         </ul>
         <h1>Liste des séries</h1>
         
