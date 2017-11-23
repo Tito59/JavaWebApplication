@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streaming.entity;
+package atelierjavaweb.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -37,6 +37,7 @@ public class Film implements Serializable {
     private String synopsis;
     private Integer annee;
     private Integer duree;
+    private String image;
     
     @OneToMany(mappedBy = "film")
     private List<Lien> liens = new ArrayList<>();

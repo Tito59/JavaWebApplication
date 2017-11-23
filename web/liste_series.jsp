@@ -14,11 +14,26 @@
         <title>JSP Page</title>
     </head>
     <body>
-    <c:import url = "Header.jsp"/>
-    <ul>
-        <li><a href="/AtelierJavaWeb/lister_films">Liste des films</a></li>
-    </ul>
-    <h1>Liste des séries</h1>
-    <c:import url = "Footer.jsp"/>
-</body>
+        <c:import url = "Header.jsp"/>
+        <div id="container">   
+            <div class="navig">
+                <nav>
+                    <ul>
+                        <li><a href="/AtelierJavaWeb/lister_films">Liste des Films</a></li>
+                        <li><a href="/AtelierJavaWeb/lister_films">Liste des épisodes</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contenu">
+                <h1>Liste des séries</h1>
+                <table border="1">
+                    <tr><th>Titre</th><th>Synopsis</th></tr>
+                            <c:forEach items="${series}" var="serie">
+                        <tr><td id="center">${serie.titre}</td><td>${serie.synopsis}</td></tr>
+                            </c:forEach>
+                </table>
+            </div>
+        </div>
+        <c:import url = "Footer.jsp"/>
+    </body>
 </html>

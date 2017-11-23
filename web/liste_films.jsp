@@ -22,18 +22,22 @@
                 <nav>
                     <ul>
                         <li><a href="/AtelierJavaWeb/lister_series">Liste des séries</a></li>
+                        <li><a href="/AtelierJavaWeb/lister_series">Liste des épisodes</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="contenu">
-                <table border="0">
+                <h1>Liste des films</h1>
+                <table border="1">
                     <tr><th>Titre</th><th>Annee</th><th>Durée</th><th>Synopsis</th></tr>
                             <c:forEach items="${films}" var="film">
-                        <tr><td>${film.titre}</td><td>${film.annee}</td><td>${film.duree}</td><td>${film.synopsis}</td></tr>
+                        <tr><td id="center">${film.titre}</td><td id="center">${film.annee}</td><td id="center">${film.duree}</td><td>${film.synopsis}</td></tr>
                     </c:forEach>
                 </table>
-                <p></p>
-                
+                <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcQ3xpYBhY-49Sk19th7zqZv7jtwAjUrRptOgrfVPu8XpKkAkjdu" width="150" height="200"/>
+                <img src="http://www.critikat.com/wp-content/uploads/2010/04/artoff906.jpg" height="200" width="150"/>
+                <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTtCSsn8gY9jEmBZnPgylDUMrirq9-WVtNwwcY2_rffiIlByNbf" height="200" width="150"/>
+                <img src="http://t1.gstatic.com/images?q=tbn:ANd9GcQ21gqNuRI6tFYoDvXXl8Yu1A1K0pVjGQT7ObEpju3T7PeOstuq" height="200" width="150"/>
             </div>
         </div>
         
