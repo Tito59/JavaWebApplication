@@ -7,15 +7,39 @@ and open the template in the editor.
     Created on : 22 nov. 2017, 16:32:17
     Author     : Formation
 */
+
+header{
+    color: white;
+    background-color:grey;
+    height:50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+body{
+    
+}
+
+#container{
+    display: flex;
+}
+
+.navig{
+    width: 15%;
+}
+
+.contenu{
+    width: 85%;
+}
+
 footer{
     color: white;
-    background:black;
-    position:absolute;
+    background-color:grey;
     bottom:0;
-    width:100%;
     left: 0;
     height:50px;
     text-align: center;
+    border-radius: 10px;
 }
 
 
