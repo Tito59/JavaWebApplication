@@ -35,8 +35,9 @@ body{
     text-align: center;
 }
 
-table{
-    width: 100%;
+.lienfilm{
+    display:inline-block;
+    cursor:pointer;    
 }
 
 .navig{

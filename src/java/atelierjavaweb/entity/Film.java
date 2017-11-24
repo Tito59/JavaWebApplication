@@ -39,6 +39,7 @@ public class Film implements Serializable {
     private Integer duree;
     private String image;
     
+    
     @OneToMany(mappedBy = "film")
     private List<Lien> liens = new ArrayList<>();
     @ManyToMany    
@@ -50,6 +51,16 @@ public class Film implements Serializable {
     @ManyToMany
     @JoinTable(name = "pays_film")
     private List<Pays> pays = new ArrayList<>();
+
+    
+    
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public Long getId() {
         return id;

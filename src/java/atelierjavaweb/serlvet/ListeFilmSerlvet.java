@@ -26,6 +26,13 @@ import atelierjavaweb.entity.Film;
 public class ListeFilmSerlvet extends HttpServlet {
 
     @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doGet(req, resp); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+        
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         EntityManagerFactory MyPersistence = Persistence.createEntityManagerFactory("PU");

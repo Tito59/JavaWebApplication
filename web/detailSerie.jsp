@@ -1,6 +1,6 @@
 <%-- 
-    Document   : liste_series
-    Created on : 22 nov. 2017, 12:27:06
+    Document   : detailFilm
+    Created on : 24 nov. 2017, 15:11:01
     Author     : Formation
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -19,22 +19,14 @@
             <div class="navig">
                 <nav>
                     <ul>
-                        <li><a href="AjouterFilm.jsp">Ajouter un film</a></li>
                         <li><a href="/AtelierJavaWeb/lister_films">Liste des Films</a></li>
+                        <li><a href="/AtelierJavaWeb/lister_series">Liste des séries</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="contenu">
-                <h1>Liste des séries</h1>
-
-                <c:forEach items="${series}" var="serie">
-                    
-                        <table border="1" class="lienfilm">
-                            <tr><td rowspan=3><a href="detailSerie.jsp?serie=${serie.id}"><img src="${serie.image}" height="200" width="150"/></a><br>${serie.titre}</td></tr>
-                        </table>
-                     
-                </c:forEach>
-
+                <!--<h1><%= ${serie} %></h1>-->
+                   
             </div>
         </div>
         <c:import url = "Footer.jsp"/>

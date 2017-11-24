@@ -24,32 +24,42 @@ import javax.persistence.OneToMany;
  */
 @Entity
 public class Serie implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     private String titre;
     private String synopsis;
-    
+    private String image;
+
     @ManyToOne
     @JoinColumn(name = "GENRE_ID")
     private Genre genre;
-    
+
     @OneToMany(mappedBy = "serie")
     private List<Saison> saisons = new ArrayList<>();
-    
+
     @ManyToMany
     @JoinTable(name = "real_serie")
     private List<Personne> realisateurs = new ArrayList<>();
-    
+
     @ManyToMany
     @JoinTable(name = "acteur_serie")
     private List<Personne> acteurs = new ArrayList<>();
-    
+
     @ManyToMany
     @JoinTable(name = "pays_serie")
     private List<Pays> pays = new ArrayList<>();
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public Long getId() {
         return id;
@@ -131,5 +141,5 @@ public class Serie implements Serializable {
     public String toString() {
         return "jpql.entity.Serie[ id=" + id + " ]";
     }
-    
+
 }
