@@ -19,12 +19,7 @@
 
         <div id="container">   
             <div class="navig">
-                <nav>
-                    <ul>
-                        <li><a href="AjouterFilm.jsp">Ajouter un film</a></li>
-                        <li><a href="/AtelierJavaWeb/lister_series">Liste des séries</a></li>
-                    </ul>
-                </nav>
+                <c:import url="_NAV.jsp"/>
             </div>
             <div class="contenu">
                 <h1>Liste des films</h1>
@@ -34,7 +29,7 @@
                         <tr ><td rowspan=3><img src="${film.image}" height="200" width="150"/><br>${film.titre}<br>${film.annee}</td></tr>
                     </table>               
                 </c:forEach>
-                <img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTbI6Oty0YtM07cRC3fOiFbDNrJ2KZ3mzRFh8X78yBHQK7RrhaF"/>
+                
             </div>
         </div>
 

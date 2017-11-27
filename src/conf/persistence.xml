@@ -10,6 +10,7 @@
     <class>atelierjavaweb.entity.Saison</class>
     <class>atelierjavaweb.entity.Serie</class>
     <class>atelierjavaweb.entity.Genre</class>
+    <class>atelierjavaweb.entity.Utilisateur</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample"/>

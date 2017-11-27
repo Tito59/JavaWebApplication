@@ -39,10 +39,10 @@ public class ListeFilmSerlvet extends HttpServlet {
         EntityManager myEm = MyPersistence.createEntityManager();
 
         myEm.getTransaction().begin();
+        
         Query query = myEm.createQuery("SELECT f FROM Film f");
         List<Film> film = (List<Film>) query.getResultList();
         
-        //String message = "Transmission de variables : OK !";
         req.setAttribute("films", film);
         req.getRequestDispatcher("liste_films.jsp").forward(req, resp);// Vers liste_films.jps
         
